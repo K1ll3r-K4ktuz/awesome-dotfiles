@@ -8,7 +8,7 @@
 
 ## Some stuff to do ##
 + Add Firefox config
-+ Change icons for some custom ones
++ Customize icons
 + Adapt the volume widget to the top panel so it's more centered
 
 ## Contents ##
