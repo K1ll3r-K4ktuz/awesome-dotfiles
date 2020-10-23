@@ -6,31 +6,29 @@
 --      ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝╚══════╝
 
 -- ===================================================================
--- Initialization
+-- Imports
 -- ===================================================================
 
 
 local awful = require("awful")
 local beautiful = require("beautiful")
 
--- define screen height and width
 local screen_height = awful.screen.focused().geometry.height
 local screen_width = awful.screen.focused().geometry.width
+--local dpi = beautiful.xresources.apply_dpi
 
 -- define module table
 local rules = {}
-
 
 -- ===================================================================
 -- Rules
 -- ===================================================================
 
 
--- return a table of client rules including provided keys / buttons
 function rules.create(clientkeys, clientbuttons)
-   return {
-      -- All clients will match this rule.
-      {
+    return {
+        -- All clients will match this rule.
+    {
          rule = {},
          properties = {
             border_width = beautiful.border_width,
@@ -41,15 +39,16 @@ function rules.create(clientkeys, clientbuttons)
             buttons = clientbuttons,
             screen = awful.screen.preferred,
             placement = awful.placement.centered
-
          },
       },
-      -- Floating clients.
-      {
+        -- Floating clients.
+    {
          rule_any = {
             instance = {
                "DTA",
                "copyq",
+	       "cantata",
+	       "telegram-desktop"
             },
             class = {
                "Nm-connection-editor"
@@ -72,19 +71,9 @@ function rules.create(clientkeys, clientbuttons)
       {
          rule_any = {
             class = {
-               "Terraria.bin.x86",
+               "flatpak run ch.openboard.OpenBoard",
             },
          }, properties = {fullscreen = true}
-      },
-
-      -- "Switch to tag"
-      -- These clients make you switch to their tag when they appear
-      {
-         rule_any = {
-            class = {
-               "Firefox"
-            },
-         }, properties = {switchtotag = true}
       },
 
       -- Visualizer
@@ -107,24 +96,25 @@ function rules.create(clientkeys, clientbuttons)
          end
       },
 
-      -- Rofi
-      {
-         rule_any = {name = {"rofi"}},
-         properties = {maximized = true, ontop = true}
-      },
 
-      -- File chooser dialog
-      {
-         rule_any = {role = {"GtkFileChooserDialog"}},
-         properties = {floating = true, width = screen_width * 0.55, height = screen_height * 0.65}
-      },
+        -- Rofi
+        {
+        rule_any = { name = { "rofi" } },
+        properties = { maximized = false, ontop = true }
+        },
 
-      -- Pavucontrol & Bluetooth Devices
-      {
-         rule_any = {class = {"Pavucontrol"}, name = {"Bluetooth Devices"}},
-         properties = {floating = true, width = screen_width * 0.55, height = screen_height * 0.45}
-      },
-   }
+        -- File chooser dialog
+        {
+        rule_any = { role = { "GtkFileChooserDialog" } },
+        properties = { floating = true, width = screen_width * 0.55, height = screen_height * 0.65 }
+        },
+
+        -- Pavucontrol & Bluetooth Devices
+        {
+        rule_any = { class = { "Pavucontrol" }, name = { "Bluetooth Devices" } },
+        properties = { floating = true, width = screen_width * 0.55, height = screen_height * 0.45 }
+        },
+    }
 end
 
 -- return module table

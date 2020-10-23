@@ -42,7 +42,7 @@ local volume_adjust = wibox({
 local volume_bar = wibox.widget{
    widget = wibox.widget.progressbar,
    shape = gears.shape.rounded_bar,
-   color = "#efefef",
+   color = "#ED4D93",
    background_color = beautiful.bg_focus,
    max_value = 100,
    value = 0
@@ -81,7 +81,7 @@ awesome.connect_signal("volume_change",
    function()
       -- set new volume value
       awful.spawn.easy_async_with_shell(
-         "amixer sget Master | grep 'Right:' | awk -F '[][]' '{print $2}'| sed 's/[^0-9]//g'",
+         "pamixer --get-volume ",
          function(stdout)
             volume_bar.value = tonumber(stdout)
          end,
