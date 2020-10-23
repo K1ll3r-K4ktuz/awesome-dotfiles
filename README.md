@@ -157,5 +157,5 @@ If you are new to awesomewm, note that tag refers to workspace, and client refer
 ## Notes ##
 + [Awesome API Documentation](https://awesomewm.org/apidoc/index.html)
 + This is a fork from [this](https://github.com/WillPower3309/awesome-dotfiles) and the original one is cooler. Check it out :)
-+ If you encounter any problems please open an issue in this repo and I can ignore it because I basically know nothing about programming but may be I will test it sometime in the future to see if I can replicate it.
++ If you encounter any problems please open an issue in this repo and I can ignore it because I basically know nothing about programming but may be I will test it sometime in the future to see if I can replicate it. (Or maybe I'm stuck with the same problem who knows)
 + If you would like to change the wallpaper, ensure that the wallpaper is named "wallpaper" and is located in the `~/.config/awesome` folder.
