@@ -3,6 +3,7 @@
 </div>
 
 ![](/screenshot.png)
+![](/screenshot2.png)
 
 ## Some stuff to do ##
 + Add Firefox config
