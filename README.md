@@ -28,6 +28,7 @@
 + **Shell**: Fish
 + **WM**: awesome
 + **GTK3 Theme**: Fleon
++ **Kvantum Theme**: Sweet Mars
 + **Icons**: Tela Pink
 + **Cursor**: Sorely's Warcraft Cursors
 + **Terminal**: Alacritty
@@ -39,13 +40,12 @@
 + Few dependencies
 + Exit screen
 + Locking (via `xsecurelock`)
-+ Touch screen friendly (I guess, I've never had any problem with my Toshiba Satellite :) )
-+ Supports multi monitor setups using xrandr and arandr
-+ Very stable: Built off of the awesome 4.3 release, no bleeding edge git versions required here!
++ Touch screen friendly (I guess, I've never had any problem with the touchscreen in my Toshiba Satellite :) )
++ Supports multi monitor setups using xrandr and arandr, so it's actually kind of manual the config. When changing the number of monitors simply restart awesome with mod+ctrl+r
++ Very stable: As stable as Arch can be hahaha
 
 <a name="dependencies"></a>
 ## Dependencies ##
-I have made my best effort to reduce the number of dependencies by using the awesome API to its fullest extent, and allowing users to edit the `apps.lua` file (see [installation section](#installation)) to define their own preferred applications. That being said, here are the dependencies.
 
 |Dependency|Description|
 |:----------:|:-------------:|
@@ -78,7 +78,7 @@ These will improve the user experience but aren't required:
 2. Clone this repository and place its contents into your `.config` folder
 3. navigate to the `awesome/wallpaper` folder and place your desired wallpaper there, ensuring that it is named `wallpaper`. One  awesome (pun intended) feature of my config is that the filetype of the wallpaper can be any image filetype and it will automatically recognize it.
 4. edit the `apps.lua` file to define your desired defaults.
-	+ The original [repo from which this is forked](https://github.com/WillPower3309/awesome-dotfiles) has the setup to autostart applications, but I have not been able to replicate it, so I add the autostarted applications directly to rc.lua.
+	+ The original [repo from which this is forked](https://github.com/WillPower3309/awesome-dotfiles) has the setup to autostart applications, but I have not been able to replicate it, so I add the autostarted applications and scripts directly to rc.lua.
 5. If the wifi top bar widget is not working, edit the `widgets/wifi.lua` file and ensure that the `local interface` variable matches your wifi interface name (if you are unsure how to find your interface name, check out [this discussion](https://bbs.archlinux.org/viewtopic.php?id=166171)).
 6. optional: edit the `keys.lua` file to change / add keybinds.
 
@@ -116,22 +116,16 @@ In order to avoid a poorly organized `rc.lua` spanning thousands of lines, it ha
 
 <a name="appTheming"></a>
 ## Application Theming ##
-### Firefox ###
-1. Set up [my custom Firefox theme](https://github.com/willpower3309/MinimalistMaterialFox)
-2. Use [this](https://github.com/Jaredk3nt/homepage) homepage
-3. Use `Liberation Sans` font
 
 ### Neovim ###
-1. Ensure the nvim folder from the repo has been copied into the `~/.config` directory
-2. Install VimPlug with
-```
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-3. Open neovim and run `:PlugInstall`
-4. Exit and reopen neovim
 
-### FIsh ###
+1. Copy nvim config (the nvim directory) to your config
+2. Install a plugin manager that lets you use the plugins in the init.nvim
+3. Open neovim and install them (if you use vim-plug just :PlugInstall)
+4. Exit and reopen neovim
+5. Enjoy my shitty setup
+
+### Fish ###
 1. Install fish
 2. Copy fish config
 3. ???
@@ -164,5 +158,6 @@ If you are new to awesomewm, note that tag refers to workspace, and client refer
 <a name="notes"></a>
 ## Notes ##
 + [Awesome API Documentation](https://awesomewm.org/apidoc/index.html)
++ This is a fork from [this](https://github.com/WillPower3309/awesome-dotfiles) and the original one is cooler. Check it out :)
 + If you encounter any problems please open an issue in this repo and I can ignore it because I basically know nothing about programming but may be I will test it sometime in the future to see if I can replicate it.
 + If you would like to change the wallpaper, ensure that the wallpaper is named "wallpaper" and is located in the `~/.config/awesome` folder.
