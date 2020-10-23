@@ -51,7 +51,7 @@
 |:----------:|:-------------:|
 |`awesome`|Window manager|
 |`feh`|Fast image viewer used as wallpaper setting utility|
-|`picom`|Window compositor, eliminates screen tearing and allows for cool fade effects. More precisely iBhagwan's compton|picom fork, which can be installed from the AUR if you are on Arch|
+|`picom`|Window compositor, eliminates screen tearing and allows for cool fade effects. More precisely iBhagwan's picom fork, which can be installed from the AUR if you are on Arch|
 |`rofi`|Application launcher|
 |`xsecurelock`|Used to lock the screen|
 
