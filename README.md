@@ -6,6 +6,11 @@
 
 ![](/screenshot.png)
 
+## Some stuff to do ##
++ Add Firefox config
++ Change icons for some custom ones
++ Adapt the volume widget to the top panel so it's more centered
+
 ## Contents ##
 1. [Details](#details)
 2. [Features](#features)
